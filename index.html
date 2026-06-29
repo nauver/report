@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CoR Annual Communication Report 2025 / Interactive Infographic</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="hero-shell" role="banner">
+    <img src="assets/logo_CoR-vertical-negative-en-quadri_LR.png" alt="European Committee of the Regions logo" class="cor-logo">
+    <div class="hero-copy">
+      <p class="eyebrow">Annual Communication Report 2025</p>
+      <h1>Communication impact in motion</h1>
+      <p class="lead">An interactive overview of the European Committee of the Regions’ 2025 communication performance.</p>
+      <div class="hero-actions" aria-label="Dashboard actions">
+        <button class="btn primary" data-jump="overview">Explore dashboard</button>
+        <button class="btn" id="contrastToggle" type="button" aria-pressed="false">High contrast</button>
+      </div>
+    </div>
+    <div class="orbit" aria-hidden="true"><span></span><span></span><span></span></div>
+  </header>
+
+  <nav class="section-nav" aria-label="Infographic sections">
+    <button class="nav-pill active" data-target="overview">Overview</button>
+    <button class="nav-pill" data-target="channels">Channels</button>
+    <button class="nav-pill" data-target="campaigns">Campaigns</button>
+    <button class="nav-pill" data-target="social">Social media</button>
+    <button class="nav-pill" data-target="events">Events</button>
+    <button class="nav-pill" data-target="lessons">Lessons</button>
+  </nav>
+
+  <main id="main">
+    <section id="overview" class="panel active" tabindex="-1" aria-labelledby="overview-title">
+      <div class="panel-heading">
+        <p class="eyebrow">At a glance</p>
+        <h2 id="overview-title">2025 was a high-visibility year</h2>
+        <p>The strongest headline is the combination of record media visibility, social growth, website growth and photo reach.</p>
+      </div>
+      <div class="metric-grid" id="heroMetrics"></div>
+    </section>
+
+    <section id="channels" class="panel" tabindex="-1" aria-labelledby="channels-title">
+      <div class="panel-heading">
+        <p class="eyebrow">Output ecosystem</p>
+        <h2 id="channels-title">Six communication engines</h2>
+        <p>Use the cards to reveal the main performance story by channel.</p>
+      </div>
+      <div class="card-grid" id="channelCards"></div>
+    </section>
+
+    <section id="campaigns" class="panel" tabindex="-1" aria-labelledby="campaigns-title">
+      <div class="panel-heading">
+        <p class="eyebrow">Priority campaigns</p>
+        <h2 id="campaigns-title">Media coverage by priority</h2>
+        <p>The Ukraine figure is presented with the caveat used in the report: it is blended within the Resilience priority and should not be treated as a standalone additive total.</p>
+      </div>
+      <div class="campaign-layout">
+        <div class="donut" id="campaignDonut" role="img" aria-label="Campaign media mention shares"></div>
+        <div class="bar-list" id="campaignBars"></div>
+      </div>
+    </section>
+
+    <section id="social" class="panel" tabindex="-1" aria-labelledby="social-title">
+      <div class="panel-heading">
+        <p class="eyebrow">Audience growth</p>
+        <h2 id="social-title">Social footprint by platform</h2>
+        <p>LinkedIn remained the largest follower base; Instagram and Threads recorded strong growth percentages.</p>
+      </div>
+      <div class="chart-card">
+        <div id="socialBars" class="horizontal-chart" aria-label="Followers by social platform"></div>
+      </div>
+    </section>
+
+    <section id="events" class="panel" tabindex="-1" aria-labelledby="events-title">
+      <div class="panel-heading">
+        <p class="eyebrow">Participation</p>
+        <h2 id="events-title">Events and public engagement</h2>
+        <p>Events, local dialogues, EURegionsWeek and EuroPCom show the breadth of in-person and online engagement.</p>
+      </div>
+      <div class="timeline" id="eventTimeline"></div>
+    </section>
+
+    <section id="lessons" class="panel" tabindex="-1" aria-labelledby="lessons-title">
+      <div class="panel-heading">
+        <p class="eyebrow">What to reuse in 2026</p>
+        <h2 id="lessons-title">Practical lessons</h2>
+      </div>
+      <ul class="lesson-list" id="lessonList"></ul>
+    </section>
+  </main>
+
+  <aside class="source-note" aria-label="Source note">
+    Source: Draft 2025 Annual Communication Report. Long version. Figures should be validated before publication.
+  </aside>
+
+  <script id="reportData" type="application/json">{"hero": [{"label": "Media mentions", "value": 28281, "suffix": "", "detail": "Highest number since 2017"}, {"label": "Social followers", "value": 261307, "suffix": "", "detail": "+18.7% across channels"}, {"label": "Website views", "value": 2400000, "suffix": "", "detail": "+41% compared with 2024"}, {"label": "Flickr views", "value": 4200000, "suffix": "", "detail": "+51% compared with 2024"}], "channels": [{"name": "Press & media", "value": "28,281", "trend": "record high", "text": "Media mentions reached the highest number since 2017. Countries with highest media coverage: Spain, Italy, Poland, Greece."}, {"name": "Social media", "value": "261,307", "trend": "+18.7%", "text": "Own organic interactions more than doubled to 83,178. Organic video views reached 1.21 million."}, {"name": "Website", "value": "2.4M", "trend": "+41%", "text": "News and press releases generated 200,000 views; Opinion Factsheets received 130,000 views."}, {"name": "Webstreaming", "value": "286", "trend": "+12% sessions", "text": "286 streamed sessions generated more than 45,000 views, excluding plenaries."}, {"name": "Photo service", "value": "4.2M", "trend": "+51% Flickr views", "text": "17,884 photos were produced and included in albums; EURegionsWeek added 4,900 photos."}, {"name": "Dynamics", "value": "723", "trend": "mailings", "text": "723 mailings and 33 live forms; email engagement increased by 55%."}], "campaigns": [{"name": "Proximity", "mentions": 14827, "share": 52, "colour": "#00A8E8", "text": "Largest share of campaign-related media mentions."}, {"name": "Cohesion", "mentions": 8102, "share": 29, "colour": "#FFED00", "text": "EURegionsWeek and Cohesion Alliance activity generated significant visibility."}, {"name": "Resilience", "mentions": 3311, "share": 12, "colour": "#75B843", "text": "Coverage included climate, water resilience and green transition activities."}, {"name": "Ukraine", "mentions": 2015, "share": 7, "colour": "#B35CFF", "text": "Reported as a blended figure within Resilience; not additive as a separate standalone total."}], "socialPlatforms": [{"name": "LinkedIn", "followers": 93140, "growth": "+25.6%"}, {"name": "Facebook", "followers": 72204, "growth": "+13%"}, {"name": "X", "followers": 56829, "growth": "-1%"}, {"name": "Instagram", "followers": 31939, "growth": "+56.8%"}, {"name": "Threads", "followers": 7195, "growth": "+54.6%"}], "events": [{"name": "Total events", "value": "137", "text": "Some 27,000 participants."}, {"name": "Hosted events", "value": "47", "text": "Almost 5,700 on-site participants."}, {"name": "Local dialogues", "value": "33", "text": "3,150 participants."}, {"name": "EURegionsWeek", "value": "7,570", "text": "Registered participants; 6,500 attended 143 sessions."}, {"name": "Close-to-you events", "value": "93", "text": "+86% compared with 2024, in 23 countries."}, {"name": "EuroPCom", "value": "2,510", "text": "Participants and viewers from 62 countries."}], "lessons": ["Fewer, clearer calls to action improve user engagement.", "Segments and mailing lists need clear ownership and maintenance.", "Continued support on copyright usage remains necessary.", "AI-generated imagery is being explored and integrated into design workflows.", "Content diversification, reels, collaborations and systematic analysis drove social media performance."]}</script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
